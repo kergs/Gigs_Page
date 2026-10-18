@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kergs Studio: Websites and online booking for small businesses</title>
+<meta name="description" content="Branded websites, booking systems and web apps for small businesses. No commission fees. Built by Kergs Studio.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kergs Studio: Websites and online booking for small businesses">
+<meta property="og:description" content="Branded websites with online booking built in. No commission fees. Ask for a demo with your business’s name on it.">
+<meta property="og:url" content="https://YOURDOMAIN.com/">
+<meta property="og:image" content="https://YOURDOMAIN.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e1a2b'/%3E%3Ctext x='16' y='23' font-size='20' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%232bb5a8'%3EK%3C/text%3E%3C/svg%3E">
+<!-- Analytics: paste your Cloudflare Web Analytics (or other) snippet here once you have it -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0b1f2e;--navy:#123244;--accent:#2bb5a8;--accent-ink:#0e7a72;--paper:#f4f8f9;--line:#d8e3e6;--mute:#53656f;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 "Manrope",system-ui,sans-serif}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:700;line-height:1.12;margin:0;letter-spacing:-.01em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus,var(--accent-ink));outline-offset:3px}
+.top,.hero,.contact,footer{--focus:var(--accent)}
+.panel,.form{--focus:var(--accent-ink)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+.btn{display:inline-block;background:var(--accent);color:var(--ink);font-weight:700;padding:14px 26px;border-radius:4px;text-decoration:none;border:2px solid var(--accent);transition:background .15s}
+.btn:hover{background:#4cc7bb}
+.btn.ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.45)}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.btn.sm{padding:9px 18px;font-size:15px}
+
+.top{position:sticky;top:0;z-index:5;background:var(--ink);border-bottom:1px solid rgba(255,255,255,.1)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px;gap:24px}
+.brand{font:700 24px "Fraunces",serif;color:var(--white);text-decoration:none}
+nav{display:flex;gap:28px;margin-left:auto}
+nav a{color:#c3cede;text-decoration:none;font-size:15px;font-weight:500}
+nav a:hover{color:var(--white)}
+
+.hero{background:var(--ink);color:var(--white)}
+.heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center;padding-top:80px;padding-bottom:80px}
+.hero h1{font-size:clamp(38px,5.2vw,62px);font-weight:600}
+.hero p.lead{color:#b9c5d8;font-size:19px;max-width:33em;margin:24px 0 34px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.panel{background:var(--white);color:var(--ink);border-top:5px solid var(--accent);border-radius:4px;padding:30px}
+.panel h2{font-size:22px;margin-bottom:16px}
+.panel ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.panel li{padding-left:30px;position:relative;font-weight:500}
+.panel li::before{content:"";position:absolute;left:4px;top:.45em;width:9px;height:15px;border:solid var(--accent-ink);border-width:0 3px 3px 0;transform:translateY(-3px) rotate(45deg)}
+.strip{background:var(--navy);border-top:1px solid rgba(255,255,255,.08)}
+.facts{display:grid;grid-template-columns:repeat(3,1fr)}
+.fact{padding:28px 28px 28px 0;margin-right:28px;border-right:1px solid rgba(255,255,255,.12)}
+.fact:last-child{border-right:0;margin-right:0}
+.fact b{display:block;font:600 24px "Fraunces",serif;color:var(--white)}
+.fact span{color:#aab8cd;font-size:15px}
+
+section.s{padding:84px 0}
+section.s + section.s{border-top:1px solid var(--line)}
+.title{font-size:clamp(30px,3.8vw,42px);margin-bottom:12px}
+.intro{color:var(--mute);max-width:36em;margin:0 0 40px}
+
+.feature{display:grid;gap:40px;background:var(--white);border:1px solid var(--line);border-radius:6px;padding:40px}
+.feature.hasimg{grid-template-columns:1fr 1.1fr;align-items:center}
+.feature h3{font-size:28px;margin-bottom:12px}
+.feature p{color:var(--mute);margin:0 0 18px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.tags li{font-size:14px;font-weight:500;background:var(--paper);border:1px solid var(--line);border-radius:99px;padding:4px 13px}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.feature + .feature{margin-top:24px}
+.btn.outline{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.outline:hover{background:var(--ink);color:var(--white)}
+.shot{border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(14,26,43,.35)}
+.shot i{display:block;height:28px;background:var(--navy);background-image:radial-gradient(circle,#5c6f8a 3px,transparent 3.5px);background-size:18px 28px;background-position:12px 0;background-repeat:repeat-x;background-clip:border-box}
+.shot img{display:block;width:100%;height:auto}
+
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;align-items:stretch}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px;display:flex;flex-direction:column}
+.plan.rec{background:var(--ink);color:var(--white);border-color:var(--ink)}
+.plan h3{font-size:24px}
+.plan .badge{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:6px}
+.price{font:600 34px "Fraunces",serif;margin:14px 0 18px}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;color:var(--mute)}
+.plan.rec ul{color:#c3cede}
+.plan li{padding-left:22px;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:2px;background:var(--accent-ink)}
+.plan.rec li::before{background:var(--accent)}
+
+.about{max-width:44em}
+.about p{color:var(--mute);font-size:18px;margin:0 0 16px}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:18px}
+.steps li::before{content:"Step " counter(s);display:block;color:var(--accent-ink);font-weight:700;font-size:15px;margin-bottom:6px}
+.steps b{display:block;font:600 21px "Fraunces",serif;margin-bottom:6px}
+.steps span{color:var(--mute)}
+
+details{border-bottom:1px solid var(--line);padding:18px 0;max-width:46em}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--accent-ink);font-size:24px;line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin:12px 0 0;color:var(--mute)}
+blockquote{margin:0;font:600 clamp(24px,3vw,34px)/1.3 "Fraunces",serif;max-width:28em}
+blockquote cite{display:block;margin-top:16px;font:500 16px "Manrope",sans-serif;color:var(--mute)}
+
+.contact{background:var(--ink);color:var(--white);padding:84px 0}
+.contact p{color:#b9c5d8;max-width:34em;margin:0 0 30px}
+footer{background:var(--ink);color:#8d9bb0;font-size:15px;border-top:1px solid rgba(255,255,255,.1)}
+footer .wrap{padding-top:22px;padding-bottom:22px}
+
+.contactGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.form{background:var(--white);color:var(--ink);padding:28px;border-radius:6px;border-top:5px solid var(--accent);display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:grid;gap:6px;font-weight:700;font-size:15px}
+.form .full,.form button{grid-column:1/-1}
+.form input,.form textarea{font:inherit;font-weight:400;padding:11px 12px;border:1.5px solid #b9c3d1;border-radius:4px;color:var(--ink);background:var(--white);width:100%}
+.form button{cursor:pointer;font:inherit;font-weight:700}
+.hp{display:none}
+.alt{margin-top:26px}
+@media(max-width:900px){.contactGrid{grid-template-columns:1fr;gap:36px}.form{grid-template-columns:1fr}}
+@media(max-width:900px){
+ nav{display:none}.bar{justify-content:space-between}
+ .heroGrid,.feature.hasimg,.cols{grid-template-columns:1fr;gap:40px}
+ .heroGrid{padding-top:56px;padding-bottom:56px}
+ .plans,.steps{grid-template-columns:1fr}
+ .facts{grid-template-columns:1fr}.fact{border-right:0;margin-right:0;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}.fact:last-child{border-bottom:0}
+ section.s{padding:60px 0}.feature{padding:26px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="#top" id="brand"></a>
+  <nav aria-label="Main"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#process">Process</a><a href="#faq">FAQ</a></nav>
+  <a class="btn sm" href="#contact">Get in touch</a>
+</div></header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap heroGrid">
+      <div>
+        <h1 id="headline"></h1>
+        <p class="lead" id="sub"></p>
+        <div class="actions"><a class="btn" id="heroCta" href="#contact"></a><a class="btn ghost" href="#work">See my work</a></div>
+      </div>
+      <aside class="panel"><h2 id="panelTitle"></h2><ul id="included"></ul></aside>
+    </div>
+    <div class="strip"><div class="wrap facts" id="facts"></div></div>
+  </div>
+
+  <section class="s" id="work"><div class="wrap"><h2 class="title">Selected work</h2><p class="intro" id="workIntro"></p><div id="projects"></div></div></section>
+  <section class="s" id="services"><div class="wrap"><h2 class="title">Services and pricing</h2><p class="intro" id="offerIntro"></p><div class="plans" id="plans"></div></div></section>
+  <section class="s" id="about"><div class="wrap about"><h2 class="title">About the studio</h2><div id="aboutText"></div></div></section>
+  <section class="s" id="process"><div class="wrap"><h2 class="title">How we work together</h2><p class="intro" id="processIntro"></p><ol class="steps" id="steps"></ol></div></section>
+  <section class="s" id="proof" hidden><div class="wrap"><blockquote id="quote"></blockquote></div></section>
+  <section class="s" id="faq"><div class="wrap"><h2 class="title">Questions owners ask</h2><div id="faqList"></div></div></section>
+  <section class="contact" id="contact"><div class="wrap contactGrid">
+    <div><h2 class="title" id="ctaTitle"></h2><p id="ctaText"></p><div class="actions alt" id="contactBtns"></div></div>
+    <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="landing_page"><input type="hidden" name="niche">
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label class="full">Business name and website (if any)<input name="business"></label>
+      <label class="full">What would you like help with?<textarea name="message" rows="4"></textarea></label>
+      <button class="btn" type="submit">Request my demo</button>
+    </form>
+  </div></section>
+</main>
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+/* ===== EDIT HERE: all page content comes from this object ===== */
+const SITE = {
+  name: "Kergs Studio",
+  fullName: "Chisom Okeke",
+  role: "Backend and cloud developer",
+  location: "Based in Nigeria, working remotely",
+  business: "[REGISTERED BUSINESS NAME & NUMBER, if registered]",
+  headline: "Professional websites and online booking for small businesses.",
+  sub: "I design and build fast, branded websites, booking systems and web apps for small service businesses. Customers book or enquire online, and the bookings and customer data stay yours. No commission fees.",
+  cta: "Get a demo for your business",
+  email: "hello@yourdomain.com",
+  whatsapp: "",                 // digits only with country code, e.g. "2348012345678"
+  panelTitle: "Included in every build",
+  included: ["Your own branded website and domain", "Online booking or enquiry forms with email confirmations", "Fast, mobile-first pages", "You own the code and the client data", "Hosting set up and tested before launch", "A written agreement and an invoice for every project"],
+  facts: [
+    { b: "About a week", t: "to launch a first version" },
+    { b: "0% commission", t: "on your bookings, ever" },
+    { b: "One business day", t: "typical reply time" }
+  ],
+  workIntro: "A recent project, built end to end.",
+  projects: [
+    {
+      title: "Barbershop booking website",
+      text: "A booking website for a working barbershop. Clients choose a service and a time, and the owner manages appointments from one place.",
+      image: "",                // screenshot, e.g. "assets/barbershop.png". Hidden if empty.
+      links: [                  // add or remove links freely. A link with an empty url is hidden.
+        { label: "View live site", url: "" },
+        { label: "Watch walkthrough", url: "" }
+      ]
+    },
+    // To add a project, fill in this one. A project with an empty title is hidden.
+    { title: "", text: "", image: "", links: [{ label: "View live site", url: "" }] }
+  ],
+  offerIntro: "Every project is quoted as a fixed price in writing before any work begins.",
+  offers: [
+    { name: "Landing page", price: "Fixed quote", items: ["One focused page built to turn visitors into enquiries", "Contact or enquiry form", "Mobile-first design"] },
+    { name: "Website + booking", price: "Fixed quote", rec: true, items: ["Home, services, gallery and contact pages", "Online booking or enquiries built in", "Domain, hosting and launch support"] },
+    { name: "Custom web app", price: "Custom quote", items: ["Bookings, dashboards, payments or customer logins", "Secure, fast and built to grow with your business", "Scoped and priced in writing"] },
+    { name: "Monthly care", price: "Monthly plan", items: ["Hosting, backups and updates", "Small edits and fixes", "Priority replies"] }
+  ],
+  about: [
+    "Kergs Studio builds websites, online booking and web apps for small service businesses. It’s run by me, Chisom Okeke, a developer focused on sites that are secure, fast and easy to maintain.",
+    "No account managers and no hand-offs: you work directly with the person building your site.",
+    "Before moving into development, I worked in sales and tech support, so I know how to explain things plainly and keep customers happy."
+  ],
+  processIntro: "A short, clear process so you always know what happens next.",
+  steps: [
+    { t: "A 15-minute call", d: "You tell me about your business and what you want the website to do for you." },
+    { t: "Your demo and a written scope", d: "I set up a version with your name, colors and services, then send a written scope with a fixed price. Nothing is billed until you approve it." },
+    { t: "Build, test and launch", d: "You pay half upfront and half at launch. Most booking pages go live in about a week." }
+  ],
+  faq: [
+    { q: "How much will it cost?", a: "Every project is quoted as a fixed price after a short call. You get the number in writing and approve it before any work starts, so there are no surprises." },
+    { q: "How do I pay, and when?", a: "Half upfront and half when the site goes live, by bank transfer or an international payment service." },
+    { q: "Do I own the website?", a: "Yes. The code, the domain and all your client data belong to you." },
+    { q: "Can we work across time zones?", a: "Yes. I’m on West Africa Time (UTC+1), reply within one business day, and we can agree a call time that suits you." },
+    { q: "What does it cost to keep running?", a: "Your domain is a small yearly fee paid directly to the registrar. Hosting is included in the Monthly care plan, and your quote lists any other running costs up front." },
+    { q: "Do I get a contract and invoices?", a: "Yes. Every project starts with a written agreement covering scope, price, timeline and ownership, and you receive an invoice for each payment." },
+    { q: "What if something breaks after launch?", a: "Every site is tested and backed up before launch. With a Monthly care plan, fixes and updates are included. Without one, small fixes are quoted before any work starts." }
+  ],
+  /* Optional: tailor the top of the page per audience with a link like yoursite.com/?niche=barbers
+     Add as many as you like. No other change to the site is ever needed. */
+  variants: {
+    barbers: { headline: "Websites with online booking for barbershops.", sub: "Clients book their own slot, you stop juggling messages, and every booking and client record stays yours. No commission fees.", cta: "Get a demo for your barbershop" },
+    salons: { headline: "Websites with online booking for salons and spas.", sub: "Let clients book treatments online, cut down on no-shows and keep your client list. No commission fees.", cta: "Get a demo for your salon" },
+    clinics: { headline: "Websites with online appointments for clinics.", sub: "Patients request and confirm appointments online, and your front desk spends less time on the phone.", cta: "Get a demo for your clinic" }
+  },
+  testimonial: { quote: "", who: "" },   // leave quote empty to hide this section
+  ctaTitle: "Want to see this with your business’s name on it?",
+  ctaText: "Fill in the form and I’ll reply with a demo built for your business."
+};
+/* ===== end of editable area ===== */
+
+const $ = id => document.getElementById(id);
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const set = (id, v) => { $(id).textContent = v; };
+
+const niche = new URLSearchParams(location.search).get("niche");
+if (niche && SITE.variants && SITE.variants[niche]) Object.assign(SITE, SITE.variants[niche]);
+document.title = SITE.name + ": " + SITE.headline;
+["headline", "sub", "panelTitle", "workIntro", "offerIntro", "processIntro", "ctaTitle", "ctaText"].forEach(k => set(k, SITE[k]));
+set("brand", SITE.name); set("heroCta", SITE.cta);
+set("foot", "© " + new Date().getFullYear() + " " + SITE.name + " · run by " + SITE.fullName + " · " + SITE.business + " · " + SITE.location);
+
+SITE.included.forEach(t => $("included").appendChild(el("li", "", t)));
+SITE.facts.forEach(f => $("facts").appendChild(el("div", "fact", "<b>" + f.b + "</b><span>" + f.t + "</span>")));
+
+SITE.projects.filter(p => p.title).forEach(p => {
+  const c = el("article", "feature" + (p.image ? " hasimg" : ""));
+  const links = (p.links || []).filter(l => l.url).map((l, i) => "<a class='btn sm" + (i ? " outline" : "") + "' href='" + l.url + "' target='_blank' rel='noopener'>" + l.label + "</a>").join("");
+  const tags = (p.stack || []).length ? "<ul class='tags'>" + p.stack.map(t => "<li>" + t + "</li>").join("") + "</ul>" : "";
+  c.innerHTML = "<div><h3>" + p.title + "</h3><p>" + p.text + "</p>" + tags + (links ? "<div class='links'>" + links + "</div>" : "") + "</div>" +
+    (p.image ? "<div class='shot'><i></i><img src='" + p.image + "' alt='Screenshot of " + p.title + "'></div>" : "");
+  $("projects").appendChild(c);
+});
+
+SITE.offers.forEach(o => $("plans").appendChild(el("article", "plan" + (o.rec ? " rec" : ""),
+  (o.rec ? "<div class='badge'>Recommended</div>" : "") + "<h3>" + o.name + "</h3><div class='price'>" + o.price + "</div><ul>" + o.items.map(i => "<li>" + i + "</li>").join("") + "</ul>")));
+
+SITE.about.forEach(t => $("aboutText").appendChild(el("p", "", t)));
+SITE.steps.forEach(s => $("steps").appendChild(el("li", "", "<b>" + s.t + "</b><span>" + s.d + "</span>")));
+SITE.faq.forEach(f => $("faqList").appendChild(el("details", "", "<summary>" + f.q + "</summary><p>" + f.a + "</p>")));
+
+if (SITE.testimonial.quote) {
+  $("quote").innerHTML = "“" + SITE.testimonial.quote + "”<cite>" + SITE.testimonial.who + "</cite>";
+  $("proof").hidden = false;
+}
+const mail = el("a", "btn ghost", "Or email me directly"); mail.href = "mailto:" + SITE.email + "?subject=" + encodeURIComponent("Demo for my business");
+$("contactBtns").appendChild(mail);
+/* Record where each visitor came from, e.g. yoursite.com/?utm_source=email&utm_medium=cold&utm_campaign=barbers-batch1 */
+const q = new URLSearchParams(location.search);
+["utm_source", "utm_medium", "utm_campaign"].forEach(k => { document.querySelector("[name=" + k + "]").value = q.get(k) || ""; });
+document.querySelector("[name=landing_page]").value = location.pathname;
+document.querySelector("[name=niche]").value = niche || "";
+if (SITE.whatsapp) { const w = el("a", "btn ghost", "Message on WhatsApp"); w.href = "https://wa.me/" + SITE.whatsapp; $("contactBtns").appendChild(w); }
+</script>
+</body>
+</html>
