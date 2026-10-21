@@ -118,6 +118,8 @@ footer .wrap{padding-top:22px;padding-bottom:22px}
 .form input,.form textarea{font:inherit;font-weight:400;padding:11px 12px;border:1.5px solid #b9c3d1;border-radius:4px;color:var(--ink);background:var(--white);width:100%}
 .form button{cursor:pointer;font:inherit;font-weight:700}
 .hp{display:none}
+.form .status{grid-column:1/-1;margin:0;max-width:none;color:var(--ink);font-weight:500}
+.form .status:empty{display:none}
 .alt{margin-top:26px}
 .icon-btn{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;border:2px solid rgba(255,255,255,.45);color:var(--white);transition:background .15s,color .15s,border-color .15s}
 .icon-btn:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
@@ -162,7 +164,7 @@ footer .wrap{padding-top:22px;padding-bottom:22px}
   <section class="s" id="faq"><div class="wrap"><h2 class="title">Questions owners ask</h2><div id="faqList"></div></div></section>
   <section class="contact" id="contact"><div class="wrap contactGrid">
     <div><h2 class="title" id="ctaTitle"></h2><p id="ctaText"></p><div class="actions alt" id="contactBtns"></div></div>
-    <form class="form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form class="form" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact">
       <p class="hp"><label>Leave this empty <input name="bot-field"></label></p>
       <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="landing_page"><input type="hidden" name="niche">
@@ -171,6 +173,7 @@ footer .wrap{padding-top:22px;padding-bottom:22px}
       <label class="full">Business name and website (if any)<input name="business"></label>
       <label class="full">What would you like help with?<textarea name="message" rows="4"></textarea></label>
       <button class="btn" type="submit">Request my demo</button>
+      <p class="status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </div></section>
 </main>
@@ -295,6 +298,27 @@ const iconLink = (href, label, svg, ext) => {
 };
 $("contactBtns").appendChild(iconLink("mailto:" + SITE.email + "?subject=" + encodeURIComponent("Demo for my business"), "Email " + SITE.email, ICONS.mail));
 if (SITE.whatsapp) $("contactBtns").appendChild(iconLink("https://wa.me/" + SITE.whatsapp, "Message " + SITE.name + " on WhatsApp", ICONS.wa, true));
+
+/* Record where each visitor came from, e.g. yoursite.com/?niche=barbers&utm_source=email&utm_medium=cold&utm_campaign=batch1 */
+const q = new URLSearchParams(location.search);
+["utm_source", "utm_medium", "utm_campaign"].forEach(k => { document.querySelector("[name=" + k + "]").value = q.get(k) || ""; });
+document.querySelector("[name=landing_page]").value = location.pathname;
+document.querySelector("[name=niche]").value = niche || "";
+
+/* Send the form without leaving the page; show a message instead of Netlify's default page */
+const form = $("contactForm"), status = $("formStatus");
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  const btn = form.querySelector("button"); btn.disabled = true; status.textContent = "Sending…";
+  try {
+    const r = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(form)).toString() });
+    if (!r.ok) throw new Error(r.status);
+    form.reset(); status.textContent = "Thank you. Your request is in and I’ll reply soon.";
+  } catch (err) {
+    status.textContent = "Sorry, that didn’t send. Please email " + SITE.email + " or message me on WhatsApp.";
+  }
+  btn.disabled = false;
+});
 </script>
 </body>
 </html>
