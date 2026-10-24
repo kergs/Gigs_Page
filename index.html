@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kergs Studio: Websites and online booking for small businesses</title>
-<meta name="description" content="Branded websites, booking systems and web apps for small businesses. No commission fees. Built by Kergs Studio.">
+<title>Kergsdev: Websites and online booking for small businesses</title>
+<meta name="description" content="Branded websites, booking systems and web apps for small businesses. No commission fees. Built by Kergsdev.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Kergs Studio: Websites and online booking for small businesses">
+<meta property="og:title" content="Kergsdev: Websites and online booking for small businesses">
 <meta property="og:description" content="Branded websites with online booking built in. No commission fees. Ask for a demo with your business’s name on it.">
 <meta property="og:url" content="https://kergsdev.site/">
 <meta property="og:image" content="https://kergsdev.site/assets/og.png">
@@ -45,6 +45,9 @@ nav a:hover{color:var(--white)}
 .hero h1{font-size:clamp(38px,5.2vw,62px);font-weight:600}
 .hero p.lead{color:#b9c5d8;font-size:19px;max-width:33em;margin:24px 0 34px}
 .actions{display:flex;gap:14px;flex-wrap:wrap}
+.heroSide{display:grid;gap:22px}
+.art{width:100%;height:auto;display:block}
+.ico{width:48px;height:48px;border-radius:10px;background:rgba(43,181,168,.14);color:var(--accent-ink);display:grid;place-items:center;margin-bottom:16px}
 .panel{background:var(--white);color:var(--ink);border-top:5px solid var(--accent);border-radius:4px;padding:30px}
 .panel h2{font-size:22px;margin-bottom:16px}
 .panel ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
@@ -79,17 +82,25 @@ section.s + section.s{border-top:1px solid var(--line)}
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;align-items:stretch}
 .plan{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:32px;display:flex;flex-direction:column}
 .plan.rec{background:var(--ink);color:var(--white);border-color:var(--ink)}
-.plan h3{font-size:24px}
+.plan h3{font-size:24px;margin-bottom:16px}
 .plan .badge{font-size:14px;font-weight:700;color:var(--accent);margin-bottom:6px}
-.price{font:600 34px "Fraunces",serif;margin:14px 0 18px}
 .plan ul{margin:0;padding:0;list-style:none;display:grid;gap:10px;color:var(--mute)}
 .plan.rec ul{color:#c3cede}
 .plan li{padding-left:22px;position:relative}
 .plan li::before{content:"";position:absolute;left:0;top:.7em;width:10px;height:2px;background:var(--accent-ink)}
 .plan.rec li::before{background:var(--accent)}
 
-.about{max-width:44em}
-.about p{color:var(--mute);font-size:18px;margin:0 0 16px}
+.tagline{font:600 clamp(22px,2.6vw,28px)/1.3 "Fraunces",serif;color:var(--accent-ink);margin:0 0 24px;max-width:28em}
+.about p{color:var(--mute);font-size:18px;margin:0 0 16px;max-width:44em}
+.about .sub{font-size:clamp(24px,3vw,32px);margin:52px 0 22px}
+.dolist{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.dolist article{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:26px}
+.dolist h4{font:600 21px/1.25 "Fraunces",serif;margin:0 0 8px}
+.dolist p{margin:0;max-width:none}
+.aboutCta{margin-top:52px;padding:40px;background:var(--ink);color:var(--white);border-radius:6px}
+.aboutCta h3{font-size:clamp(26px,3vw,34px);margin-bottom:16px}
+.aboutCta p{color:#b9c5d8}
+.aboutCta .sign{color:var(--white);font-weight:700;margin:22px 0}
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:s}
 .steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:18px}
 .steps li::before{content:"Step " counter(s);display:block;color:var(--accent-ink);font-weight:700;font-size:15px;margin-bottom:6px}
@@ -149,16 +160,57 @@ footer .wrap{padding-top:22px;padding-bottom:22px}
       <div>
         <h1 id="headline"></h1>
         <p class="lead" id="sub"></p>
-        <div class="actions"><a class="btn" id="heroCta" href="#contact"></a><a class="btn ghost" href="#work">See my work</a></div>
+        <div class="actions"><a class="btn" id="heroCta" href="#contact"></a><a class="btn ghost" href="#work">See our work</a></div>
       </div>
+      <div class="heroSide">
+      <svg class="art" viewBox="0 0 480 270" role="img" aria-label="Illustration of a business website with an online booking screen and a phone showing a confirmed appointment">
+        <circle cx="250" cy="140" r="122" fill="#2bb5a8" opacity=".13"/>
+        <rect x="20" y="24" width="360" height="226" rx="12" fill="#f4f8f9"/>
+        <path d="M20 36a12 12 0 0112-12h336a12 12 0 0112 12v22H20z" fill="#123244"/>
+        <circle cx="40" cy="41" r="4.5" fill="#5c6f8a"/><circle cx="56" cy="41" r="4.5" fill="#5c6f8a"/><circle cx="72" cy="41" r="4.5" fill="#5c6f8a"/>
+        <rect x="96" y="35" width="180" height="12" rx="6" fill="#0b1f2e" opacity=".55"/>
+        <rect x="44" y="80" width="150" height="14" rx="7" fill="#0b1f2e"/>
+        <rect x="44" y="104" width="210" height="8" rx="4" fill="#9fb0bd"/>
+        <rect x="44" y="120" width="180" height="8" rx="4" fill="#9fb0bd"/>
+        <g stroke="#d8e3e6" stroke-width="1.5" fill="#fff">
+          <rect x="44" y="148" width="72" height="26" rx="6"/><rect x="128" y="148" width="72" height="26" rx="6" fill="#2bb5a8" stroke="#2bb5a8"/><rect x="212" y="148" width="72" height="26" rx="6"/>
+          <rect x="44" y="184" width="72" height="26" rx="6"/><rect x="128" y="184" width="72" height="26" rx="6"/><rect x="212" y="184" width="72" height="26" rx="6"/>
+        </g>
+        <rect x="44" y="222" width="110" height="20" rx="10" fill="#0b1f2e"/>
+        <g transform="translate(330 70)">
+          <rect width="124" height="190" rx="20" fill="#123244" stroke="#5c6f8a" stroke-width="1.5"/>
+          <rect x="8" y="10" width="108" height="170" rx="14" fill="#fff"/>
+          <circle cx="62" cy="58" r="24" fill="#2bb5a8"/>
+          <path d="M51 58l8 8 15-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="30" y="98" width="64" height="9" rx="4.5" fill="#0b1f2e"/>
+          <rect x="22" y="118" width="80" height="7" rx="3.5" fill="#9fb0bd"/>
+          <rect x="34" y="134" width="56" height="7" rx="3.5" fill="#9fb0bd"/>
+          <rect x="26" y="154" width="72" height="14" rx="7" fill="#123244"/>
+        </g>
+      </svg>
       <aside class="panel"><h2 id="panelTitle"></h2><ul id="included"></ul></aside>
+      </div>
     </div>
     <div class="strip"><div class="wrap facts" id="facts"></div></div>
   </div>
 
   <section class="s" id="work"><div class="wrap"><h2 class="title">Selected work</h2><p class="intro" id="workIntro"></p><div id="projects"></div></div></section>
-  <section class="s" id="services"><div class="wrap"><h2 class="title">Services and pricing</h2><p class="intro" id="offerIntro"></p><div class="plans" id="plans"></div></div></section>
-  <section class="s" id="about"><div class="wrap about"><h2 class="title">About the studio</h2><div id="aboutText"></div></div></section>
+  <section class="s" id="services"><div class="wrap"><h2 class="title">Our services</h2><div class="plans" id="plans"></div></div></section>
+  <section class="s" id="about"><div class="wrap about">
+    <h2 class="title" id="aboutTitle"></h2>
+    <p class="tagline" id="aboutTagline"></p>
+    <div id="aboutIntro"></div>
+    <h3 class="sub" id="doTitle"></h3>
+    <div class="dolist" id="doList"></div>
+    <h3 class="sub" id="moreTitle"></h3>
+    <div id="aboutMore"></div>
+    <div class="aboutCta">
+      <h3 id="aboutCtaTitle"></h3>
+      <div id="aboutCta"></div>
+      <p class="sign" id="aboutSign"></p>
+      <a class="btn" href="#contact" id="aboutBtn"></a>
+    </div>
+  </div></section>
   <section class="s" id="process"><div class="wrap"><h2 class="title">How we work together</h2><p class="intro" id="processIntro"></p><ol class="steps" id="steps"></ol></div></section>
   <section class="s" id="proof" hidden><div class="wrap"><blockquote id="quote"></blockquote></div></section>
   <section class="s" id="faq"><div class="wrap"><h2 class="title">Questions owners ask</h2><div id="faqList"></div></div></section>
@@ -181,13 +233,10 @@ footer .wrap{padding-top:22px;padding-bottom:22px}
 <script>
 /* ===== EDIT HERE: all page content comes from this object ===== */
 const SITE = {
-  name: "Kergs Studio",
-  fullName: "Chisom Okeke",
-  role: "Backend and cloud developer",
-  location: "Based in Nigeria, working remotely",
+  name: "Kergsdev",
   business: "",                // optional: registered business name and number. Hidden if empty.
-  headline: "Professional websites and online booking for small businesses.",
-  sub: "I design and build fast, branded websites, booking systems and web apps for small service businesses. Customers book or enquire online, and the bookings and customer data stay yours. No commission fees.",
+  headline: "You don’t need to be a big company to have a great website for your business.",
+  sub: "We design and build fast, branded websites, booking systems and web apps for small service businesses. Customers book or enquire online, and the bookings and customer data stay yours. No commission fees.",
   cta: "Get a demo for your business",
   email: "chisom@kergsdev.site",
   whatsapp: "2348108313381",   // digits only, with country code
@@ -212,29 +261,49 @@ const SITE = {
     // To add a project, fill in this one. A project with an empty title is hidden.
     { title: "", text: "", image: "", links: [{ label: "View live site", url: "" }] }
   ],
-  offerIntro: "Every project is quoted as a fixed price in writing before any work begins.",
   offers: [
-    { name: "Landing page", price: "Fixed quote", items: ["One focused page built to turn visitors into enquiries", "Contact or enquiry form", "Mobile-first design"] },
-    { name: "Website + booking", price: "Fixed quote", rec: true, items: ["Home, services, gallery and contact pages", "Online booking or enquiries built in", "Domain, hosting and launch support"] },
-    { name: "Custom web app", price: "Custom quote", items: ["Bookings, dashboards, payments or customer logins", "Secure, fast and built to grow with your business", "Scoped and priced in writing"] },
-    { name: "Monthly care", price: "Monthly plan", items: ["Hosting, backups and updates", "Small edits and fixes", "Priority replies"] }
+    { name: "Landing page", icon: "page", items: ["One focused page built to turn visitors into enquiries", "Contact or enquiry form", "Mobile-first design"] },
+    { name: "Website + booking", icon: "web", items: ["Home, services, gallery and contact pages", "Online booking or enquiries built in", "Domain, hosting and launch support"] },
+    { name: "Custom web app", icon: "code", items: ["Bookings, dashboards, payments or customer logins", "Secure, fast and built to grow with your business", "Planned and agreed in writing before work begins"] },
+    { name: "Monthly care", icon: "care", items: ["Hosting, backups and updates", "Small edits and fixes", "Priority replies"] }
   ],
-  about: [
-    "Kergs Studio builds websites, online booking and web apps for small service businesses. It’s run by me, Chisom Okeke, a developer focused on sites that are secure, fast and easy to maintain.",
-    "No account managers and no hand-offs: you work directly with the person building your site.",
-    "Before moving into development, I worked in sales and tech support, so I know how to explain things plainly and keep customers happy."
-  ],
+  about: {
+    title: "About Kergsdev",
+    tagline: "Helping Your Business Work Smarter and Grow Online.",
+    intro: [
+      "Running a business is already a lot of work. Finding the right technology to support it shouldn’t make things harder.",
+      "At Kergsdev, we help businesses simplify their operations, reach more customers, and grow with the right digital solutions. From professional websites that showcase your business to booking systems that make managing appointments easier, we build tools that work for you.",
+      "We understand that every business is different. Whether you’re just starting out, looking to take your business online, or ready to improve how you serve your customers, we’re here to help you find a solution that fits your needs and goals."
+    ],
+    doTitle: "What We Do",
+    services: [
+      { icon: "web", t: "Websites That Work for Your Business", d: "Give your business a professional online presence where customers can discover your services, learn about what you offer, and take the next step with confidence." },
+      { icon: "calendar", t: "Booking Systems That Make Life Easier", d: "Spend less time managing appointments manually. We build booking systems that help your customers book your services more easily while making your daily operations simpler." }
+    ],
+    moreTitle: "More Than Just Technology",
+    more: [
+      "At Kergsdev, we believe technology should solve problems, not create new ones. That’s why we focus on understanding your business before building your solution.",
+      "We work with you to turn your ideas into practical digital tools that make sense for your business, your customers, and your goals. No unnecessary complexity. No one-size-fits-all approach. Just solutions built with a clear purpose.",
+      "Our goal is simple: to help you spend less time worrying about how your business works behind the scenes and more time focusing on where you want to take it."
+    ],
+    ctaTitle: "Let’s Build Something That Works for You.",
+    cta: [
+      "Your business has room to grow, and we’re here to help you take the next step.",
+      "Whether you have a clear idea of what you need or you’re still figuring things out, let’s talk about your business and explore how the right digital solution can make a difference."
+    ],
+    sign: "Kergsdev — Your Business Goals, Built Into Digital Solutions.",
+    button: "Let’s Talk About Your Project"
+  },
   processIntro: "A short, clear process so you always know what happens next.",
   steps: [
-    { t: "A 15-minute call", d: "You tell me about your business and what you want the website to do for you." },
-    { t: "Your demo and a written scope", d: "I set up a version with your name, colors and services, then send a written scope with a fixed price. Nothing is billed until you approve it." },
+    { t: "A 15-minute call", d: "You tell us about your business and what you want the website to do for you." },
+    { t: "Your demo and a written scope", d: "We set up a version with your name, colors and services, then send a written scope with a fixed price. Nothing is billed until you approve it." },
     { t: "Build, test and launch", d: "You pay half upfront and half at launch. Most booking pages go live in about a week." }
   ],
   faq: [
     { q: "How much will it cost?", a: "Every project is quoted as a fixed price after a short call. You get the number in writing and approve it before any work starts, so there are no surprises." },
     { q: "How do I pay, and when?", a: "Half upfront and half when the site goes live, by bank transfer or an international payment service." },
     { q: "Do I own the website?", a: "Yes. The code, the domain and all your client data belong to you." },
-    { q: "Can we work across time zones?", a: "Yes. I’m on West Africa Time (UTC+1), reply within one business day, and we can agree a call time that suits you." },
     { q: "What does it cost to keep running?", a: "Your domain is a small yearly fee paid directly to the registrar. Hosting is included in the Monthly care plan, and your quote lists any other running costs up front." },
     { q: "Do I get a contract and invoices?", a: "Yes. Every project starts with a written agreement covering scope, price, timeline and ownership, and you receive an invoice for each payment." },
     { q: "What if something breaks after launch?", a: "Every site is tested and backed up before launch. With a Monthly care plan, fixes and updates are included. Without one, small fixes are quoted before any work starts." }
@@ -248,20 +317,29 @@ const SITE = {
   },
   testimonial: { quote: "", who: "" },   // leave quote empty to hide this section
   ctaTitle: "Want to see this with your business’s name on it?",
-  ctaText: "Fill in the form and I’ll reply with a demo built for your business."
+  ctaText: "Fill in the form and we’ll reply with a demo built for your business."
 };
 /* ===== end of editable area ===== */
 
 const $ = id => document.getElementById(id);
 const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
 const set = (id, v) => { $(id).textContent = v; };
+const G = d => "<svg viewBox='0 0 24 24' width='26' height='26' fill='none' stroke='currentColor' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'>" + d + "</svg>";
+const GLYPHS = {
+  web: G("<rect x='3' y='4' width='18' height='16' rx='2'/><path d='M3 9h18M7 6.5h.01M10 6.5h.01'/>"),
+  calendar: G("<rect x='3' y='5' width='18' height='16' rx='2'/><path d='M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4'/>"),
+  page: G("<rect x='5' y='3' width='14' height='18' rx='2'/><path d='M8 8h8M8 12h8M8 16h4'/>"),
+  code: G("<path d='M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14'/>"),
+  care: G("<path d='M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z'/><path d='M9 12l2 2 4-4'/>")
+};
+const ico = k => GLYPHS[k] ? "<div class='ico'>" + GLYPHS[k] + "</div>" : "";
 
 const niche = new URLSearchParams(location.search).get("niche");
 if (niche && SITE.variants && SITE.variants[niche]) Object.assign(SITE, SITE.variants[niche]);
 document.title = SITE.name + ": " + SITE.headline;
-["headline", "sub", "panelTitle", "workIntro", "offerIntro", "processIntro", "ctaTitle", "ctaText"].forEach(k => set(k, SITE[k]));
+["headline", "sub", "panelTitle", "workIntro", "processIntro", "ctaTitle", "ctaText"].forEach(k => set(k, SITE[k]));
 set("brand", SITE.name); set("heroCta", SITE.cta);
-set("foot", ["© " + new Date().getFullYear() + " " + SITE.name, "run by " + SITE.fullName, SITE.business, SITE.location].filter(Boolean).join(" · "));
+set("foot", ["© " + new Date().getFullYear() + " " + SITE.name, SITE.business].filter(Boolean).join(" · "));
 
 SITE.included.forEach(t => $("included").appendChild(el("li", "", t)));
 SITE.facts.forEach(f => $("facts").appendChild(el("div", "fact", "<b>" + f.b + "</b><span>" + f.t + "</span>")));
@@ -275,10 +353,15 @@ SITE.projects.filter(p => p.title).forEach(p => {
   $("projects").appendChild(c);
 });
 
-SITE.offers.forEach(o => $("plans").appendChild(el("article", "plan" + (o.rec ? " rec" : ""),
-  (o.rec ? "<div class='badge'>Recommended</div>" : "") + "<h3>" + o.name + "</h3><div class='price'>" + o.price + "</div><ul>" + o.items.map(i => "<li>" + i + "</li>").join("") + "</ul>")));
+SITE.offers.forEach(o => $("plans").appendChild(el("article", "plan",
+  ico(o.icon) + "<h3>" + o.name + "</h3><ul>" + o.items.map(i => "<li>" + i + "</li>").join("") + "</ul>")));
 
-SITE.about.forEach(t => $("aboutText").appendChild(el("p", "", t)));
+const A = SITE.about;
+[["aboutTitle", A.title], ["aboutTagline", A.tagline], ["doTitle", A.doTitle], ["moreTitle", A.moreTitle], ["aboutCtaTitle", A.ctaTitle], ["aboutSign", A.sign], ["aboutBtn", A.button]].forEach(([id, v]) => set(id, v));
+A.intro.forEach(t => $("aboutIntro").appendChild(el("p", "", t)));
+A.services.forEach(x => $("doList").appendChild(el("article", "", ico(x.icon) + "<h4>" + x.t + "</h4><p>" + x.d + "</p>")));
+A.more.forEach(t => $("aboutMore").appendChild(el("p", "", t)));
+A.cta.forEach(t => $("aboutCta").appendChild(el("p", "", t)));
 SITE.steps.forEach(s => $("steps").appendChild(el("li", "", "<b>" + s.t + "</b><span>" + s.d + "</span>")));
 SITE.faq.forEach(f => $("faqList").appendChild(el("details", "", "<summary>" + f.q + "</summary><p>" + f.a + "</p>")));
 
@@ -307,9 +390,9 @@ form.addEventListener("submit", async e => {
   try {
     const r = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: new URLSearchParams(new FormData(form)).toString() });
     if (!r.ok) throw new Error(r.status);
-    form.reset(); status.textContent = "Thank you. Your request is in and I’ll reply soon.";
+    form.reset(); status.textContent = "Thank you. Your request is in and we’ll reply soon.";
   } catch (err) {
-    status.textContent = "Sorry, that didn’t send. Please email " + SITE.email + " or message me on WhatsApp.";
+    status.textContent = "Sorry, that didn’t send. Please email " + SITE.email + " or message us on WhatsApp.";
   }
   btn.disabled = false;
 });
