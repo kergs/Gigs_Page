@@ -135,6 +135,26 @@ footer .wrap{padding-top:22px;padding-bottom:22px}
 .icon-btn{display:inline-grid;place-items:center;width:54px;height:54px;border-radius:50%;border:2px solid rgba(255,255,255,.45);color:var(--white);transition:background .15s,color .15s,border-color .15s}
 .icon-btn:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
 .icon-btn svg{width:26px;height:26px;fill:currentColor}
+/* Glass styling */
+.hero{background:radial-gradient(55% 70% at 88% 8%,rgba(43,181,168,.38),transparent 62%),radial-gradient(45% 60% at 8% 95%,rgba(48,104,214,.32),transparent 62%),var(--ink)}
+.top{background:rgba(11,31,46,.7);-webkit-backdrop-filter:blur(14px) saturate(150%);backdrop-filter:blur(14px) saturate(150%)}
+.btn{border-radius:8px;transition:transform .15s,box-shadow .15s,background .15s}
+.btn:not(.ghost):not(.outline){background:linear-gradient(135deg,#3ccbbd,#2bb5a8);box-shadow:0 10px 26px -10px rgba(43,181,168,.7)}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:rgba(255,255,255,.07);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.hero{margin-top:-69px;padding-top:69px}
+.panel{--focus:var(--accent);background:rgba(255,255,255,.08);color:var(--white);border:1px solid rgba(255,255,255,.2);border-radius:16px;-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 24px 48px -24px rgba(0,0,0,.55)}
+.panel li::before{border-color:var(--accent)}
+.strip{background:rgba(255,255,255,.05);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.12)}
+.art{filter:drop-shadow(0 24px 36px rgba(0,0,0,.4))}
+.feature,.plan,.dolist article{border-radius:14px;box-shadow:0 1px 2px rgba(11,31,46,.05),0 18px 36px -22px rgba(11,31,46,.28);transition:transform .2s,box-shadow .2s}
+.plan:hover,.dolist article:hover{transform:translateY(-4px);box-shadow:0 1px 2px rgba(11,31,46,.05),0 26px 44px -22px rgba(11,31,46,.34)}
+#services{background:linear-gradient(180deg,var(--paper),#e4f0f0)}
+.aboutCta{border-radius:16px;border:1px solid rgba(255,255,255,.12);background:radial-gradient(60% 90% at 100% 0%,rgba(43,181,168,.35),transparent 60%),radial-gradient(50% 80% at 0% 100%,rgba(48,104,214,.3),transparent 60%),var(--ink)}
+.contact{background:radial-gradient(50% 80% at 10% 0%,rgba(43,181,168,.3),transparent 60%),radial-gradient(45% 70% at 95% 100%,rgba(48,104,214,.28),transparent 60%),var(--ink)}
+.form{border-radius:16px;border-top:0;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+.icon-btn{background:rgba(255,255,255,.08);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+@media(prefers-reduced-motion:reduce){.btn,.plan,.dolist article{transition:none}.btn:hover,.plan:hover,.dolist article:hover{transform:none}}
 @media(max-width:900px){.contactGrid{grid-template-columns:1fr;gap:36px}.form{grid-template-columns:1fr}}
 @media(max-width:900px){
  nav{display:none}.bar{justify-content:space-between}
